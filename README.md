@@ -1,37 +1,5 @@
 CodeAssist - An AI assistant that understands an entire software repository and helps developers navigate, debug, explain, and modify code using Hybrid RAG.
 
-High-Level Architecture:
-
-                    GitHub Repository
-                           │
-                Clone / Fetch Repository
-                           │
-        ┌──────────────────┴──────────────────┐
-        │                                     │
- Parse Code                         Parse Documentation
-(AST, symbols)                      (README, docs)
-        │                                     │
-        └──────────────────┬──────────────────┘
-                           │
-                 Intelligent Chunking
-                           │
-          ┌────────────────┴───────────────┐
-          │                                │
-     BM25 Index                    Vector Database
-          │                                │
-          └──────────────┬─────────────────┘
-                         │
-                   Hybrid Retrieval
-                         │
-                    Cross-Encoder
-                       Reranker
-                         │
-                    Context Builder
-                         │
-                        LLM
-                         │
-                    Final Answer
-
 Technology Stack
 Backend:
 1. Python
@@ -62,3 +30,5 @@ C++
 JavaScript
 TypeScript
 Go
+
+Note: The README will be updated with the full architecture and technology stack when the project is ready.
